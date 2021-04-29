@@ -18,10 +18,7 @@ const Header = ({ titlePre = '' }) => {
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} Bob</title>
-        <meta
-          name="description"
-          content="みなさん、こんにちは！私のブログへようこそ、あなたは本当にこのページへの道を失ったに違いありません。"
-        />
+        <meta name="description" content="12" />
         <meta name="og:title" content="Bob" />
         <meta property="og:image" content={ogImageUrl} />
         <meta name="twitter:site" content="@_ijjk" />
