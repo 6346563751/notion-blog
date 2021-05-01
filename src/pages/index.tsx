@@ -27,6 +27,7 @@ export async function getStaticProps({ preview }) {
       return post
     })
     .filter(Boolean)
+    .reverse()
 
   const { users } = await getNotionUsers([...authorsToGet])
 
