@@ -4,7 +4,7 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #1c212c;
+  --bg: #0a1931;
   --fg: #9facd4;
   --accents-1: #111;
   --accents-2: #333;
@@ -367,4 +367,68 @@ footer span:nth-child(1) {
 
 footer span:nth-child(1) a {
   color: inherit;
+}
+
+@media screen and (min-width: 700px) {
+  .bio {
+    margin: 0 10em;
+  }
+}
+
+.bio p {
+  color: #fff;
+}
+
+.github {
+  color: gray;
+  border-bottom: solid;
+}
+
+.discord {
+  color: blue;
+  border-bottom: solid;
+}
+
+.bob {
+  background: linear-gradient(
+    to right,
+    #6666ff,
+    #0099ff,
+    #00ff00,
+    #ff3399,
+    #6666ff
+  );
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.last-articles {
+  color: #fff;
+  margin-top: 2em;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.list-posts {
+  border: 1px solid;
+}
+
+.video-lol {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

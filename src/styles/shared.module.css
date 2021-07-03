@@ -5,7 +5,9 @@
   height: auto;
 }
 
-.layout h1,
-.layout h2 {
+.layout h1 {
   text-align: center;
+}
+
+.layout iframe {
 }

@@ -60,36 +60,49 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>Bob</h1>
+        <h1>
+          Hey, I'm <span className="bob">Bob</span> 👋
+        </h1>
+        <div className="bio">
+          <p>
+            I am a high school student with a thirst for learning. I am
+            specialized in web development. You can follow me on{' '}
+            <span className="github">Github</span> where I post some codes and
+            on <span className="discord">Discord</span> where I'm just chilling.
+          </p>
+        </div>
+        <h2 className="last-articles">Lastest articles</h2>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
-        {posts.map((post) => {
-          return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <span className={blogStyles.titleContainer}>
-                  {!post.Published && (
-                    <span className={blogStyles.draftBadge}>Draft</span>
-                  )}
-                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                    <a>{post.Page}</a>
-                  </Link>
-                </span>
-              </h3>
-              {post.Date && (
-                <div className="posted">le {getDateStr(post.Date)}</div>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
+        <div className="list-posts">
+          {posts.map((post) => {
+            return (
+              <div className={blogStyles.postPreview} key={post.Slug}>
+                <h3>
+                  <span className={blogStyles.titleContainer}>
+                    {!post.Published && (
+                      <span className={blogStyles.draftBadge}>Draft</span>
+                    )}
+                    <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                      <a>{post.Page}</a>
+                    </Link>
+                  </span>
+                </h3>
+                {post.Date && (
+                  <div className="posted">le {getDateStr(post.Date)}</div>
                 )}
-              </p>
-            </div>
-          )
-        })}
+                <p>
+                  {(!post.preview || post.preview.length === 0) &&
+                    'No preview available'}
+                  {(post.preview || []).map((block, idx) =>
+                    textBlock(block, true, `${post.Slug}${idx}`)
+                  )}
+                </p>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </>
   )

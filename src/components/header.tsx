@@ -6,7 +6,7 @@ import styles from '../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Blog', page: '/' },
-  { label: 'Contact', page: '/contact' },
+  { label: 'Ressources', page: '/ressources' },
 ]
 
 const ogImageUrl = 'https://media.giphy.com/media/QBA56XrGs3i2zMiryz/giphy.gif'
@@ -33,9 +33,9 @@ const Header = ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
-      <ul>
+      <navbar>
         {navItems.map(({ label, page, link }) => (
-          <li key={label}>
+          <p key={label}>
             {page ? (
               <Link href={page}>
                 <a className={pathname === page ? 'active' : undefined}>
@@ -45,9 +45,9 @@ const Header = ({ titlePre = '' }) => {
             ) : (
               <ExtLink href={link}>{label}</ExtLink>
             )}
-          </li>
+          </p>
         ))}
-      </ul>
+      </navbar>
     </header>
   )
 }

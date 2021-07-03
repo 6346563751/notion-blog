@@ -63,13 +63,10 @@
 }
 
 .postPreview {
-  max-width: 600px;
+  width: 100%;
   margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-}
-
-.postPreview:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid var(--fg);
+  padding: 0px 32px;
 }
 
 .postPreview h3,
@@ -248,4 +245,8 @@
   border-radius: 1px;
   width: 100%;
   height: 100%;
+}
+
+.postPreview:last-child {
+  border-bottom: none;
 }
