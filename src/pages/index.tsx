@@ -67,8 +67,14 @@ const Index = ({ posts = [], preview }) => {
           <p>
             I am a high school student with a thirst for learning. I am
             specialized in web development. You can follow me on{' '}
-            <span className="github">Github</span> where I post some codes and
-            on <span className="discord">Discord</span> where I'm just chilling.
+            <span className="github">
+              <a href="https://github.com/6346563751">Github</a>
+            </span>{' '}
+            where I post some codes and on{' '}
+            <span className="discord">
+              <a href="https://discord.gg/tNqBJYQNTB">Discord</a>
+            </span>{' '}
+            where I'm just chilling.
           </p>
         </div>
         <h2 className="last-articles">Lastest articles</h2>
