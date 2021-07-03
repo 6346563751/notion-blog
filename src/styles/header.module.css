@@ -31,13 +31,13 @@
   }
 }
 
-.header navbar {
+.header div {
   display: flex;
   flex-direction: row;
   width: 100%;
   background-color: #ffc947;
 }
 
-.header navbar p {
+.header div p {
   margin-left: 2em;
 }

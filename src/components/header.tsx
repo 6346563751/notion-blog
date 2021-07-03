@@ -33,7 +33,7 @@ const Header = ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
-      <navbar>
+      <div>
         {navItems.map(({ label, page, link }) => (
           <p key={label}>
             {page ? (
@@ -47,7 +47,7 @@ const Header = ({ titlePre = '' }) => {
             )}
           </p>
         ))}
-      </navbar>
+      </div>
     </header>
   )
 }
