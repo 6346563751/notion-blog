@@ -22,9 +22,6 @@ export default function Contact() {
             height="315"
             src="https://www.youtube-nocookie.com/embed/i3bv1nm-HZE?controls=0"
             title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
           ></iframe>
         </div>
       </div>
