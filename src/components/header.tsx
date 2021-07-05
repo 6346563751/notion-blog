@@ -35,7 +35,11 @@ const Header = ({ titlePre = '' }) => {
       </Head>
       <div className="relative select-none bg-white lg:flex lg:items-stretch w-full pt-5 pl-5">
         <div className="lg:flex ml-10">
-          <Image src="/home.svg" width={32} height={32} />
+          <a className="cursor-pointer">
+            <Link href="/">
+              <Image src="/home.svg" width={32} height={32} />
+            </Link>
+          </a>
         </div>
         <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
           <div className="lg:flex lg:items-stretch lg:justify-end ml-auto mr-10">
