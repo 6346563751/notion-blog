@@ -62,8 +62,8 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`bg-white`}>
-        <div className="flex flex-row lg:mx-60 mt-20">
-          <div className="flex flex-col">
+        <div className="flex flex-row lg:mx-60 lg:mt-20">
+          <div className="flex flex-col text-center lg:text-left">
             <div>
               <p className="text-4xl font-bold text-green-400 mb-5">
                 Hey, I'm <span className="bob">Bob</span> 👋
@@ -92,7 +92,7 @@ const Index = ({ posts = [], preview }) => {
               </button>
             </div>
           </div>
-          <div className="right">
+          <div className="hidden lg:block right">
             <Image
               src="/kj.jpg"
               className="rounded-full flex-shrink-0"
