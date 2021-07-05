@@ -42,7 +42,7 @@ const Header = ({ titlePre = '' }) => {
             {navItems.map(({ label, page, link }) => (
               <Link href={page}>
                 <a
-                  class={
+                  className={
                     'flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark ' +
                     (pathname === page ? 'font-bold' : '')
                   }
