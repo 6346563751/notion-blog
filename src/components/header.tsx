@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
-import styles from '../styles/header.module.css'
+import Image from 'next/image'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
   { label: 'Blog', page: '/' },
@@ -15,7 +15,7 @@ const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
 
   return (
-    <header className={styles.header}>
+    <header>
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} Bob</title>
         <meta
@@ -33,20 +33,26 @@ const Header = ({ titlePre = '' }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
-      <div>
-        {navItems.map(({ label, page, link }) => (
-          <p key={label}>
-            {page ? (
+      <div className="relative select-none bg-white lg:flex lg:items-stretch w-full pt-5 pl-5">
+        <div className="lg:flex ml-10">
+          <Image src="/home.svg" width={32} height={32} />
+        </div>
+        <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
+          <div className="lg:flex lg:items-stretch lg:justify-end ml-auto mr-10">
+            {navItems.map(({ label, page, link }) => (
               <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
+                <a
+                  class={
+                    'flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark ' +
+                    (pathname === page ? 'font-bold' : '')
+                  }
+                >
                   {label}
                 </a>
               </Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </p>
-        ))}
+            ))}
+          </div>
+        </div>
       </div>
     </header>
   )
