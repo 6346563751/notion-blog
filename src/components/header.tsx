@@ -34,7 +34,7 @@ const Header = ({ titlePre = '' }) => {
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
       <div className="relative select-none bg-white lg:flex lg:items-stretch w-full pt-5 pl-5">
-        <div className="lg:flex ml-10">
+        <div className="lg:flex lg:ml-10">
           <a className="cursor-pointer">
             <Link href="/">
               <Image src="/home.svg" width={32} height={32} />
@@ -42,12 +42,12 @@ const Header = ({ titlePre = '' }) => {
           </a>
         </div>
         <div className="lg:flex lg:items-stretch lg:flex-no-shrink lg:flex-grow">
-          <div className="lg:flex lg:items-stretch lg:justify-end ml-auto mr-10">
+          <div className="lg:flex lg:items-stretch lg:justify-end lg:ml-auto lg:mr-10">
             {navItems.map(({ label, page, link }) => (
               <Link href={page}>
                 <a
                   className={
-                    'flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark ' +
+                    'flex-no-grow flex-no-shrink relative py-2 lg:px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark ' +
                     (pathname === page ? 'font-bold' : '')
                   }
                 >
