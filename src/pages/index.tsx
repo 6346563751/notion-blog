@@ -95,7 +95,7 @@ const Index = ({ posts = [], preview }) => {
           <div className="right">
             <Image
               src="/kj.jpg"
-              class="rounded-full flex-shrink-0"
+              className="rounded-full flex-shrink-0"
               width={650}
               height={650}
             />
