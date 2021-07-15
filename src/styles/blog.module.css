@@ -250,8 +250,7 @@
 .postPreview:last-child {
   border-bottom: none;
 }
-
-.post > p:first-of-type::first-letter {
+<<<<<<< HEAD .post > p:first-of-type::first-letter {
   font-size: 4em;
   float: left;
   font-weight: 700;
