@@ -110,30 +110,35 @@ const Index = ({ posts = [], preview }) => {
         </svg>
         <div className="w-full bg-red-400  px-10">
           <h2 className="text-white font-medium mb-2">Lastest articles</h2>
-          <div className="border-2 bg-white">
+          <div className="">
             {posts.map((post) => {
               return (
-                <div className={blogStyles.postPreview} key={post.Slug}>
-                  <h3>
-                    <span className={blogStyles.titleContainer}>
-                      {!post.Published && (
-                        <span className={blogStyles.draftBadge}>Draft</span>
-                      )}
-                      <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                        <a>{post.Page}</a>
-                      </Link>
-                    </span>
-                  </h3>
-                  {post.Date && (
-                    <div className="posted">le {getDateStr(post.Date)}</div>
-                  )}
-                  <p>
-                    {(!post.preview || post.preview.length === 0) &&
-                      'No preview available'}
-                    {(post.preview || []).map((block, idx) =>
-                      textBlock(block, true, `${post.Slug}${idx}`)
+                <div
+                  className="border-b-8 border-t-8 border-red-400"
+                  key={post.Slug}
+                >
+                  <div className="bg-white rounded  p-4">
+                    <h3>
+                      <span className={blogStyles.titleContainer}>
+                        {!post.Published && (
+                          <span className={blogStyles.draftBadge}>Draft</span>
+                        )}
+                        <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                          <a>{post.Page}</a>
+                        </Link>
+                      </span>
+                    </h3>
+                    {post.Date && (
+                      <div className="posted">le {getDateStr(post.Date)}</div>
                     )}
-                  </p>
+                    <p>
+                      {(!post.preview || post.preview.length === 0) &&
+                        'No preview available'}
+                      {(post.preview || []).map((block, idx) =>
+                        textBlock(block, true, `${post.Slug}${idx}`)
+                      )}
+                    </p>
+                  </div>
                 </div>
               )
             })}
