@@ -4,48 +4,18 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2021-07-05T10:47:54.263Z</updated>
+    <updated>2021-07-22T16:16:10.113Z</updated>
     <id>My Notion Blog</id>
     <entry>
-      <id>/blog/spring-challenge-2021</id>
-      <title>Spring Challenge 2021</title>
-      <link href="/blog/spring-challenge-2021"/>
-      <updated>2021-05-01T06:00:00.397Z</updated>
+      <id>/blog/isjaoi</id>
+      <title>joaijszioaj</title>
+      <link href="https://bobb.vercel.app/blog/isjaoi"/>
+      <updated>2021-07-19T22:00:00.843Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>Le Spring Challenge est un concours de programmation.</p>
+          
           <p class="more">
-            <a href="/blog/spring-challenge-2021">Read more</a>
-          </p>
-        </div>
-      </content>
-      <author><name>Bob B</name></author>
-    </entry>
-    <entry>
-      <id>/blog/tips-js</id>
-      <title>Tips JS</title>
-      <link href="/blog/tips-js"/>
-      <updated>2021-04-29T06:00:00.398Z</updated>
-      <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>Bloc note de tips javascript pour la programmation de compétition/codegolf 💻</p>
-          <p class="more">
-            <a href="/blog/tips-js">Read more</a>
-          </p>
-        </div>
-      </content>
-      <author><name>Bob B</name></author>
-    </entry>
-    <entry>
-      <id>/blog/collection</id>
-      <title>Collection articles</title>
-      <link href="/blog/collection"/>
-      <updated>2021-06-13T06:00:00.398Z</updated>
-      <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-          <p>Collection personnelle d&#x27;articles</p>
-          <p class="more">
-            <a href="/blog/collection">Read more</a>
+            <a href="/blog/isjaoi">Read more</a>
           </p>
         </div>
       </content>

@@ -34,7 +34,7 @@ function mapToEntry(post) {
     <entry>
       <id>${post.link}</id>
       <title>${decode(post.title)}</title>
-      <link href="${post.link}"/>
+      <link href="https://bobb.vercel.app${post.link}"/>
       <updated>${new Date(post.date).toJSON()}</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -72,7 +72,7 @@ function createRSS(blogPosts = []) {
   </feed>`
 }
 
-async function main() {
+export async function main() {
   await loadEnvConfig(process.cwd())
   serverConstants.NOTION_TOKEN = process.env.NOTION_TOKEN
   serverConstants.BLOG_INDEX_ID = serverConstants.normalizeId(

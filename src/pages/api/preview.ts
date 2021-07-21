@@ -1,8 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import getPageData from '../../lib/notion/getPageData'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+import { main } from '../../lib/build-rss'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  main()
   if (typeof req.query.token !== 'string') {
     return res.status(401).json({ message: 'invalid token' })
   }
