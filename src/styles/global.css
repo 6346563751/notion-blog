@@ -295,7 +295,7 @@ h2 {
 }
 
 p {
-  color: #979ba3;
+  color: rgba(75, 85, 99, 1);
   font-weight: 400;
   font-size: 0.94rem;
   line-height: 1.7;
