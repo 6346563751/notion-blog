@@ -79,7 +79,7 @@ const Index = ({ posts = [], preview }) => {
             </div>
             <div className="bio mr-5">
               <p className="text-gray-600">
-                I am a high school student with a thirst for learning. I am
+                I am a student with a thirst for learning. I am
                 specialized in web development. You can follow me on{' '}
                 <span className="text-black border-b-2 border-black">
                   <a href="https://github.com/6346563751">Github</a>
